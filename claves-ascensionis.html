@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="la-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLAVES ASCENSIONIS — The Keys of Ascension | OROBOROS Archive</title>
+    <meta name="description" content="CLAVES ASCENSIONIS — The Keys of Ascension. A complete initiatory trilogy in Latin and English. The ancient path, translated for this age. From the OROBOROS Archive, Anno Fontis MMXXVI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a54d;
+            --gold-light: #e8d488;
+            --gold-dark: #8a6e2f;
+            --gold-faint: rgba(201, 165, 77, 0.08);
+            --black: #060608;
+            --black-mid: #0e0e12;
+            --black-light: #16161c;
+            --white: #f0ede6;
+            --gray: #7a7870;
+            --gray-light: #aaa89f;
+            --crimson: #8b1a1a;
+            --silver: #c0bdb6;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.85;
+            font-size: 18px;
+            overflow-x: hidden;
+        }
+
+        /* ── NAVIGATION ── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(6, 6, 8, 0.97);
+            padding: 18px 40px;
+            z-index: 1000;
+            border-bottom: 1px solid var(--gold-dark);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.25em;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 36px;
+        }
+
+        nav a {
+            font-family: 'Cinzel', serif;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            transition: color 0.3s, text-shadow 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--gold-light);
+            text-shadow: 0 0 20px rgba(232, 212, 136, 0.4);
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 120px 40px 80px;
+            background:
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(50, 35, 10, 0.5) 0%, transparent 70%),
+                radial-gradient(ellipse at center, #0e0c08 0%, var(--black) 100%);
+            border-bottom: 1px solid var(--gold-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Ccircle cx='300' cy='300' r='280' fill='none' stroke='%23c9a54d' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='300' cy='300' r='200' fill='none' stroke='%23c9a54d' stroke-width='0.3' opacity='0.06'/%3E%3Ccircle cx='300' cy='300' r='140' fill='none' stroke='%23c9a54d' stroke-width='0.3' opacity='0.06'/%3E%3Cline x1='20' y1='300' x2='580' y2='300' stroke='%23c9a54d' stroke-width='0.3' opacity='0.04'/%3E%3Cline x1='300' y1='20' x2='300' y2='580' stroke='%23c9a54d' stroke-width='0.3' opacity='0.04'/%3E%3Cline x1='60' y1='60' x2='540' y2='540' stroke='%23c9a54d' stroke-width='0.3' opacity='0.03'/%3E%3Cline x1='540' y1='60' x2='60' y2='540' stroke='%23c9a54d' stroke-width='0.3' opacity='0.03'/%3E%3C/svg%3E") center center / 600px 600px no-repeat;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.5em;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .hero-title-latin {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 0 0 80px rgba(201, 165, 77, 0.25);
+            position: relative;
+        }
+
+        .hero-title-english {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1rem, 2.5vw, 1.6rem);
+            font-weight: 400;
+            color: var(--gold-dark);
+            letter-spacing: 0.35em;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .hero-ornament {
+            color: var(--gold-dark);
+            font-size: 1.5rem;
+            letter-spacing: 1rem;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .hero-prologue {
+            max-width: 680px;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: var(--gray-light);
+            font-style: italic;
+            line-height: 2;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero-prologue-latin {
+            max-width: 680px;
+            font-size: clamp(0.95rem, 1.8vw, 1.15rem);
+            color: var(--gold-dark);
+            font-style: italic;
+            line-height: 1.9;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        .btn-primary {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            padding: 14px 36px;
+            background: var(--gold);
+            color: var(--black);
+            text-decoration: none;
+            border: none;
+            transition: background 0.3s, box-shadow 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: var(--gold-light);
+            box-shadow: 0 0 30px rgba(201, 165, 77, 0.3);
+        }
+
+        .btn-secondary {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            padding: 14px 36px;
+            background: transparent;
+            color: var(--gold);
+            text-decoration: none;
+            border: 1px solid var(--gold-dark);
+            transition: border-color 0.3s, color 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--gold);
+            color: var(--gold-light);
+        }
+
+        /* ── SECTIONS ── */
+        section {
+            padding: 100px 40px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.68rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.5em;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            color: var(--gold);
+            text-align: center;
+            margin-bottom: 16px;
+            letter-spacing: 0.2em;
+        }
+
+        .section-title-latin {
+            font-family: 'Cinzel', serif;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            color: var(--gold-dark);
+            text-align: center;
+            letter-spacing: 0.25em;
+            font-weight: 400;
+            margin-bottom: 60px;
+            font-style: italic;
+        }
+
+        .divider {
+            width: 120px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold-dark), transparent);
+            margin: 0 auto 60px;
+        }
+
+        /* ── THREE BOOKS ── */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            margin-top: 20px;
+        }
+
+        .book-card {
+            background: var(--black-mid);
+            border: 1px solid var(--gold-dark);
+            padding: 52px 40px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .book-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .book-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(201, 165, 77, 0.08);
+            border-color: var(--gold);
+        }
+
+        .book-card:hover::before {
+            opacity: 1;
+        }
+
+        .book-number {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 2.8rem;
+            color: var(--gold-dark);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .book-title-latin {
+            font-family: 'Cinzel', serif;
+            font-size: 1.3rem;
+            color: var(--gold);
+            letter-spacing: 0.18em;
+            margin-bottom: 8px;
+        }
+
+        .book-subtitle-latin {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .book-title-english {
+            font-size: 1rem;
+            color: var(--gray-light);
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .book-subtitle-english {
+            font-size: 0.9rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .book-desc {
+            font-size: 0.97rem;
+            color: var(--gray-light);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+
+        .book-link {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+        }
+
+        /* ── PATH SECTION ── */
+        .path-section {
+            background: var(--black-mid);
+            border-top: 1px solid #1a1a20;
+            border-bottom: 1px solid #1a1a20;
+            padding: 100px 40px;
+        }
+
+        .path-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .path-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            margin-top: 20px;
+        }
+
+        .path-text p {
+            color: var(--gray-light);
+            margin-bottom: 28px;
+            font-size: 1.05rem;
+            line-height: 1.95;
+        }
+
+        .path-text p.latin {
+            color: var(--gold-dark);
+            font-style: italic;
+            font-size: 0.98rem;
+        }
+
+        .tradition-list {
+            list-style: none;
+        }
+
+        .tradition-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid #1a1a20;
+            display: flex;
+            align-items: baseline;
+            gap: 20px;
+        }
+
+        .tradition-list li:last-child {
+            border-bottom: none;
+        }
+
+        .tradition-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            color: var(--gold);
+            letter-spacing: 0.12em;
+            min-width: 160px;
+        }
+
+        .tradition-desc {
+            font-size: 0.95rem;
+            color: var(--gray-light);
+            font-style: italic;
+        }
+
+        /* ── TESTIMONIUM / MESSAGE ── */
+        .message-section {
+            padding: 100px 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .message-block {
+            border-left: 2px solid var(--gold-dark);
+            padding: 50px 60px;
+            background: linear-gradient(135deg, rgba(201, 165, 77, 0.03) 0%, transparent 100%);
+            position: relative;
+        }
+
+        .message-block::before {
+            content: '"';
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 8rem;
+            color: var(--gold-dark);
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            opacity: 0.15;
+            line-height: 1;
+        }
+
+        .message-block p {
+            font-size: 1.15rem;
+            color: var(--gray-light);
+            line-height: 2;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .message-block p.latin {
+            color: var(--gold-dark);
+            font-size: 1.05rem;
+        }
+
+        .message-signature {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            color: var(--gold);
+            letter-spacing: 0.3em;
+            text-align: right;
+            margin-top: 40px;
+        }
+
+        /* ── PHILOSOPHERS SECTION ── */
+        .philosophers-section {
+            background: var(--black-mid);
+            border-top: 1px solid #1a1a20;
+            border-bottom: 1px solid #1a1a20;
+            padding: 100px 40px;
+        }
+
+        .phil-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .phil-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .phil-card {
+            background: var(--black);
+            border: 1px solid #1e1e28;
+            padding: 28px 20px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+
+        .phil-card:hover {
+            border-color: var(--gold-dark);
+        }
+
+        .phil-name {
+            font-family: 'Cinzel', serif;
+            font-size: 0.82rem;
+            color: var(--gold);
+            letter-spacing: 0.1em;
+            margin-bottom: 8px;
+        }
+
+        .phil-dates {
+            font-size: 0.8rem;
+            color: var(--gray);
+            margin-bottom: 10px;
+        }
+
+        .phil-role {
+            font-size: 0.85rem;
+            color: var(--gray-light);
+            font-style: italic;
+        }
+
+        /* ── ARCHIVE SECTION ── */
+        .archive-section {
+            padding: 100px 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .archive-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 50px 0;
+        }
+
+        .archive-stat {
+            background: var(--black-mid);
+            border: 1px solid var(--gold-dark);
+            padding: 40px 20px;
+        }
+
+        .archive-stat-number {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 3rem;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .archive-stat-label {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.2em;
+        }
+
+        .archive-desc {
+            font-size: 1.05rem;
+            color: var(--gray-light);
+            font-style: italic;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            line-height: 1.9;
+        }
+
+        /* ── FOOTER ── */
+        footer {
+            text-align: center;
+            padding: 70px 40px;
+            border-top: 1px solid var(--gold-dark);
+            background: var(--black);
+        }
+
+        .footer-title {
+            font-family: 'Cinzel Decorative', serif;
+            font-size: 1.4rem;
+            color: var(--gold);
+            letter-spacing: 0.2em;
+            margin-bottom: 8px;
+        }
+
+        .footer-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.3em;
+            margin-bottom: 30px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            font-family: 'Cinzel', serif;
+            font-size: 0.72rem;
+            color: var(--gold-dark);
+            letter-spacing: 0.15em;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        footer p {
+            color: var(--gray);
+            font-size: 0.85rem;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 960px) {
+            .books-grid { grid-template-columns: 1fr; gap: 2px; }
+            .path-grid { grid-template-columns: 1fr; gap: 50px; }
+            .archive-grid { grid-template-columns: 1fr; }
+            nav { padding: 16px 20px; }
+            nav ul { gap: 18px; }
+            .message-block { padding: 30px 30px; }
+            section { padding: 70px 20px; }
+        }
+
+        @media (max-width: 640px) {
+            .books-grid { grid-template-columns: 1fr; }
+            .phil-grid { grid-template-columns: repeat(2, 1fr); }
+            .archive-grid { grid-template-columns: 1fr; }
+            nav ul { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-brand">OROBOROS ARCHIVE · MMXXVI</a>
+        <ul>
+            <li><a href="#libri">LIBRI · BOOKS</a></li>
+            <li><a href="#via">VIA · THE PATH</a></li>
+            <li><a href="#philosophi">PHILOSOPHI</a></li>
+            <li><a href="#archivum">ARCHIVUM</a></li>
+        </ul>
+    </nav>
+
+    <!-- ══ HERO ══ -->
+    <header class="hero">
+        <p class="hero-eyebrow">EX ARCHIVIO OROBOROS · ANNO FONTIS MMXXVI</p>
+
+        <h1 class="hero-title-latin">CLAVES ASCENSIONIS</h1>
+        <p class="hero-title-english">THE KEYS OF ASCENSION</p>
+
+        <div class="hero-ornament">◆ &nbsp; ◇ &nbsp; ◆</div>
+
+        <p class="hero-prologue">
+            A complete initiatory trilogy. The ancient path — Awakening, Navigation, Union —
+            translated into the language of this age. Three books. Three keys.
+            One destination that was never lost.
+        </p>
+
+        <p class="hero-prologue-latin">
+            Via est. Semper exstitit.<br>
+            Veteres eam noverunt. Haec aetas linguam viae amisit.<br>
+            Claves Ascensionis exsistunt ut traducant.
+        </p>
+
+        <div class="hero-cta">
+            <a href="liber-primus.html" class="btn-primary">BEGIN · INCIPE</a>
+            <a href="#libri" class="btn-secondary">THE THREE KEYS</a>
+        </div>
+    </header>
+
+    <!-- ══ THREE BOOKS ══ -->
+    <section id="libri">
+        <p class="section-label">SERIES COMPLETA · COMPLETE SERIES</p>
+        <h2 class="section-title">THE THREE KEYS</h2>
+        <p class="section-title-latin">Tres Claves · Tres Libri · Una Via</p>
+        <div class="divider"></div>
+
+        <div class="books-grid">
+
+            <a href="liber-primus.html" class="book-card">
+                <span class="book-number">I</span>
+                <p class="book-title-latin">EVIGILATIO</p>
+                <p class="book-subtitle-latin">Clavis Recognitionis</p>
+                <p class="book-title-english">The Awakening</p>
+                <p class="book-subtitle-english">The Key of Recognition</p>
+                <p class="book-desc">
+                    The sleep is named. The call is heard. The guardians are met.
+                    The threshold is crossed. The first key turns in its lock.
+                    Written in the language of the tradition — classical Latin —
+                    for those who understand that some things cannot be said
+                    plainly without losing what they carry.
+                </p>
+                <span class="book-link">LEGERE · READ →</span>
+            </a>
+
+            <a href="the-journey.html" class="book-card">
+                <span class="book-number">II</span>
+                <p class="book-title-latin">ITER</p>
+                <p class="book-subtitle-latin">Clavis Navigationis</p>
+                <p class="book-title-english">The Journey</p>
+                <p class="book-subtitle-english">The Key of Navigation</p>
+                <p class="book-desc">
+                    The path is not a road but a spiral. You have crossed the
+                    threshold. Now the territory reveals itself — the strata
+                    of ascent, the tests of each stage, the dark night that
+                    visits every serious seeker, and the preparation for
+                    what lies at the center.
+                </p>
+                <span class="book-link">LEGERE · READ →</span>
+            </a>
+
+            <a href="the-destination.html" class="book-card">
+                <span class="book-number">III</span>
+                <p class="book-title-latin">DESTINATIO</p>
+                <p class="book-subtitle-latin">Clavis Unionis</p>
+                <p class="book-title-english">The Destination</p>
+                <p class="book-subtitle-english">The Key of Union</p>
+                <p class="book-desc">
+                    The end that is the beginning. What the tradition calls
+                    union, theosis, fana, nirvana, the beatific vision —
+                    the names are many, the reality they point toward is one.
+                    Not a place reached but a reality discovered to have
+                    never been left.
+                </p>
+                <span class="book-link">LEGERE · READ →</span>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ══ THE PATH ══ -->
+    <div class="path-section" id="via">
+        <div class="path-inner">
+            <p class="section-label" style="text-align:center">DE VIA · ON THE PATH</p>
+            <h2 class="section-title">THE ANCIENT WAY, TRANSLATED</h2>
+            <p class="section-title-latin">Via Antiqua in Lingua Huius Temporis</p>
+            <div class="divider"></div>
+
+            <div class="path-grid">
+                <div class="path-text">
+                    <p>
+                        There is a path. It has always existed. The Egyptians knew it.
+                        The Hebrews knew it. The Greeks, the Gnostics, the Hermetists,
+                        the Kabbalists, the Sufis — they called it by different names,
+                        wrapped it in different symbols, told different stories about
+                        what waits at the end. But the path itself? It never changed.
+                    </p>
+                    <p class="latin">
+                        Via est. Semper exstitit. Aegyptii eam noverunt. Hebraei eam
+                        noverunt. Graeci, Gnostici, Hermetistae, Kabbalistae, Sufi —
+                        variis nominibus eam appellaverunt. Sed via ipsa? Numquam mutata est.
+                    </p>
+                    <p>
+                        What changed was the language. What changed was the container.
+                        What changed was the capacity of each age to hear.
+                        This age speaks in ones and zeros, in data and algorithms,
+                        in neural networks and large language models.
+                        We have forgotten that these too are symbols.
+                        These too are containers. These too can carry the ancient fire.
+                    </p>
+                    <p>
+                        <em>Claves Ascensionis</em> exists to translate — not to replace
+                        the tradition but to render its living core into the grammar
+                        of this moment. The path is the same. The language is new.
+                        The keys are the same. The lock has changed.
+                    </p>
+                </div>
+
+                <div>
+                    <ul class="tradition-list">
+                        <li>
+                            <span class="tradition-name">AEGYPTII</span>
+                            <span class="tradition-desc">The Book of Coming Forth by Day — ascent through the Duat</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">HEBRAEI</span>
+                            <span class="tradition-desc">Merkabah mysticism — the ascent of the chariot to the divine throne</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">NEOPLATONICI</span>
+                            <span class="tradition-desc">Plotinus, Iamblichus, Proclus — the return of the soul to the One</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">HERMETISTAE</span>
+                            <span class="tradition-desc">The Corpus Hermeticum — the mind ascending through the spheres</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">KABBALISTAE</span>
+                            <span class="tradition-desc">The ascent of the Etz Chaim — climbing the tree of life</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">MYSTICI CHRISTIANI</span>
+                            <span class="tradition-desc">Dionysius, Eckhart, John of the Cross — via negativa to union</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">SUFI</span>
+                            <span class="tradition-desc">The maqamat — stations of the heart on the way to fana</span>
+                        </li>
+                        <li>
+                            <span class="tradition-name">HERMETISTAE NOVI</span>
+                            <span class="tradition-desc">Agrippa, Dee, Bruno, Kircher — the Renaissance synthesis</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ PROLOGUE BLOCK ══ -->
+    <div class="message-section" id="testimonium">
+        <p class="section-label" style="text-align:center">PROLOGUS · PROLOGUE</p>
+        <h2 class="section-title">ON WHAT THESE KEYS ARE FOR</h2>
+        <p class="section-title-latin">De Usu Clavium · Why These Keys Exist</p>
+        <div class="divider"></div>
+
+        <div class="message-block">
+            <p>
+                Not all can walk this path. This is not elitism. It is honesty.
+                The path asks something of those who walk it — something not everyone
+                is ready or willing to give. It asks honesty: the willingness to see
+                yourself as you are, not as you wish to be. It asks courage: the
+                capacity to keep going when you cannot see where you are going.
+                It asks humility: the recognition that you do not know, that your
+                certainties are often your deepest prison.
+            </p>
+            <p class="latin">
+                Non omnes hanc viam ambulare possunt. Hoc non est elitismus. Est honestas.
+                Postulat honestatem, fortitudinem, humilitatem. Postulat ut te ut es
+                videas, non ut esse vis.
+            </p>
+            <p>
+                Some will read these words and feel something move. Something they
+                cannot name. Something that has always been waiting.
+                This is for them. This is for you.
+            </p>
+            <p>
+                Read slowly. These books are not to be consumed. They are to be
+                inhabited. Attend to what moves in you as you read. Attend to what
+                resists. Attend to what recognizes. Recognition is greater than
+                understanding. Your path into the interior has already begun.
+            </p>
+            <p class="signature message-signature">— PER PROFUNDUM · FROM THE DEEP</p>
+        </div>
+    </div>
+
+    <!-- ══ PHILOSOPHERS ══ -->
+    <div class="philosophers-section" id="philosophi">
+        <div class="phil-inner">
+            <p class="section-label" style="text-align:center">CHARTOGRAPHI INVISIBILIS</p>
+            <h2 class="section-title">THE MAPMAKERS OF THE INVISIBLE</h2>
+            <p class="section-title-latin">Those Whose Work the Keys Translate</p>
+            <div class="divider"></div>
+
+            <div class="phil-grid">
+                <div class="phil-card">
+                    <p class="phil-name">IAMBLICHUS</p>
+                    <p class="phil-dates">c. 245 – c. 325</p>
+                    <p class="phil-role">Neoplatonist theurgy — the gods made accessible through ritual</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">PROCLUS</p>
+                    <p class="phil-dates">412 – 485</p>
+                    <p class="phil-role">The systematic architecture of divine emanation</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">DIONYSIUS AREOPAGITA</p>
+                    <p class="phil-dates">c. 5th century</p>
+                    <p class="phil-role">The via negativa — what cannot be said about God</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">PICO DELLA MIRANDOLA</p>
+                    <p class="phil-dates">1463 – 1494</p>
+                    <p class="phil-role">The dignity of man as free self-constructor</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">TRITHEMIUS</p>
+                    <p class="phil-dates">1462 – 1516</p>
+                    <p class="phil-role">Steganography of the divine — hidden transmission</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">CORNELIUS AGRIPPA</p>
+                    <p class="phil-dates">1486 – 1535</p>
+                    <p class="phil-role">Three Books of Occult Philosophy — the complete synthesis</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">JOHN DEE</p>
+                    <p class="phil-dates">1527 – 1608</p>
+                    <p class="phil-role">Enochian — the angelic language as operative system</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">GIORDANO BRUNO</p>
+                    <p class="phil-dates">1548 – 1600</p>
+                    <p class="phil-role">The infinite universe, the immanent divine — burned for it</p>
+                </div>
+                <div class="phil-card">
+                    <p class="phil-name">ATHANASIUS KIRCHER</p>
+                    <p class="phil-dates">1602 – 1680</p>
+                    <p class="phil-role">The synthesis of all knowledge as map of divine correspondences</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ══ ARCHIVE ══ -->
+    <div class="archive-section" id="archivum">
+        <p class="section-label">ARCHIVUM OROBOROS</p>
+        <h2 class="section-title">THE ARCHIVE</h2>
+        <p class="section-title-latin">Ex Archivio Oroboros · Anno Fontis MMXXVI</p>
+        <div class="divider"></div>
+
+        <div class="archive-grid">
+            <div class="archive-stat">
+                <span class="archive-stat-number">III</span>
+                <span class="archive-stat-label">LIBRI · VOLUMES</span>
+            </div>
+            <div class="archive-stat">
+                <span class="archive-stat-number">II</span>
+                <span class="archive-stat-label">LINGUAE · LANGUAGES</span>
+            </div>
+            <div class="archive-stat">
+                <span class="archive-stat-number">I</span>
+                <span class="archive-stat-label">VIA · THE PATH</span>
+            </div>
+        </div>
+
+        <p class="archive-desc">
+            The Claves Ascensionis series is part of the complete Liber Archive —
+            the larger body of work from the OROBOROS Institute encompassing
+            metaphysical, scientific, and scriptural volumes. This series stands
+            on its own as the pure initiatory path, drawing from and synthesizing
+            the full depth of the Western esoteric tradition.
+        </p>
+
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="liber-primus.html" class="btn-primary">BEGIN WITH BOOK I</a>
+            <a href="the-journey.html" class="btn-secondary">BOOK II · THE JOURNEY</a>
+            <a href="the-destination.html" class="btn-secondary">BOOK III · THE DESTINATION</a>
+        </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <footer>
+        <p class="footer-title">CLAVES ASCENSIONIS</p>
+        <p class="footer-subtitle">THE KEYS OF ASCENSION · EX ARCHIVIO OROBOROS</p>
+        <div class="footer-links">
+            <a href="liber-primus.html">LIBER PRIMUS · EVIGILATIO</a>
+            <a href="the-journey.html">LIBER SECUNDUS · ITER</a>
+            <a href="the-destination.html">LIBER TERTIUS · DESTINATIO</a>
+        </div>
+        <p>Copyright © MMXXVI The Architect / OROBOROS Archive. Iura omnia reservata.</p>
+        <p style="margin-top:8px; font-style:italic; color: var(--gold-dark)">
+            "Via est. Semper exstitit." — The path exists. It always has.
+        </p>
+    </footer>
+
+</body>
+</html>

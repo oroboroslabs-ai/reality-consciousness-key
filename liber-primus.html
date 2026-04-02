@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="la-en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVIGILATIO · Liber Primus — CLAVES ASCENSIONIS</title>
+    <meta name="description" content="EVIGILATIO — Clavis Recognitionis. The Awakening. The Key of Recognition. Book One of CLAVES ASCENSIONIS. Written in classical Latin.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a54d;
+            --gold-light: #e8d488;
+            --gold-dark: #8a6e2f;
+            --black: #060608;
+            --black-mid: #0e0e12;
+            --black-light: #16161c;
+            --white: #f0ede6;
+            --gray: #7a7870;
+            --gray-light: #aaa89f;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.85;
+            font-size: 18px;
+        }
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: rgba(6,6,8,0.97);
+            padding: 18px 40px; z-index: 1000;
+            border-bottom: 1px solid var(--gold-dark);
+            backdrop-filter: blur(12px);
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .nav-brand { font-family:'Cinzel',serif; font-size:0.75rem; color:var(--gold-dark); letter-spacing:0.25em; text-decoration:none; }
+        nav ul { list-style:none; display:flex; gap:32px; }
+        nav a { font-family:'Cinzel',serif; color:var(--gold); text-decoration:none; font-size:0.78rem; letter-spacing:0.18em; transition:color 0.3s; }
+        nav a:hover { color:var(--gold-light); }
+
+        /* Hero */
+        .book-hero {
+            min-height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center; padding: 120px 40px 80px;
+            background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(139,26,26,0.12) 0%, transparent 65%),
+                        radial-gradient(ellipse at center, #0e0a0a 0%, var(--black) 100%);
+            border-bottom: 1px solid var(--gold-dark);
+        }
+        .book-eyebrow { font-family:'Cinzel',serif; font-size:0.7rem; color:var(--gold-dark); letter-spacing:0.5em; margin-bottom:30px; }
+        .book-roman { font-family:'Cinzel Decorative',serif; font-size:5rem; color:var(--gold-dark); opacity:0.4; margin-bottom:-20px; }
+        .book-title-main { font-family:'Cinzel Decorative',serif; font-size:clamp(3rem,8vw,6rem); font-weight:700; color:var(--gold); letter-spacing:0.1em; text-shadow:0 0 80px rgba(201,165,77,0.2); margin-bottom:20px; }
+        .book-clavis { font-family:'Cinzel',serif; font-size:clamp(0.9rem,2.5vw,1.3rem); color:var(--gold-dark); letter-spacing:0.3em; margin-bottom:12px; }
+        .book-english { font-family:'Cinzel',serif; font-size:clamp(0.85rem,2vw,1.1rem); color:var(--gray); letter-spacing:0.25em; margin-bottom:50px; font-style:italic; }
+        .ornament { color:var(--gold-dark); letter-spacing:1rem; font-size:1.2rem; margin-bottom:40px; }
+        .book-intro { max-width:650px; font-size:clamp(1rem,2vw,1.25rem); color:var(--gray-light); font-style:italic; line-height:2; margin-bottom:16px; }
+        .book-intro-latin { max-width:650px; font-size:clamp(0.9rem,1.8vw,1.1rem); color:var(--gold-dark); font-style:italic; line-height:1.9; margin-bottom:50px; }
+        .btn-row { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+        .btn-p { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.2em; padding:14px 36px; background:var(--gold); color:var(--black); text-decoration:none; transition:background 0.3s; }
+        .btn-p:hover { background:var(--gold-light); }
+        .btn-s { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.2em; padding:14px 36px; background:transparent; color:var(--gold); text-decoration:none; border:1px solid var(--gold-dark); transition:all 0.3s; }
+        .btn-s:hover { border-color:var(--gold); color:var(--gold-light); }
+
+        /* Content */
+        .page-section { padding:90px 40px; max-width:1100px; margin:0 auto; }
+        .section-label { font-family:'Cinzel',serif; font-size:0.68rem; color:var(--gold-dark); letter-spacing:0.5em; text-align:center; margin-bottom:14px; }
+        .section-title { font-family:'Cinzel',serif; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--gold); text-align:center; margin-bottom:14px; letter-spacing:0.2em; }
+        .section-latin { font-family:'Cinzel',serif; font-size:clamp(0.85rem,1.8vw,1.1rem); color:var(--gold-dark); text-align:center; letter-spacing:0.2em; font-style:italic; margin-bottom:50px; }
+        .divider { width:100px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-dark),transparent); margin:0 auto 50px; }
+
+        /* Dedicatio */
+        .dedicatio {
+            text-align:center; padding:60px 40px;
+            border-top:1px solid #1a1a20; border-bottom:1px solid #1a1a20;
+            background:var(--black-mid);
+        }
+        .dedicatio-text { font-size:1.25rem; color:var(--gray-light); font-style:italic; line-height:2; margin-bottom:16px; max-width:600px; margin-left:auto; margin-right:auto; }
+        .dedicatio-latin { font-size:1.1rem; color:var(--gold-dark); font-style:italic; line-height:1.9; max-width:600px; margin:0 auto 16px; }
+        .dedicatio-ornament { color:var(--gold-dark); font-size:1.5rem; letter-spacing:0.5rem; margin-top:30px; }
+
+        /* Structure */
+        .structure-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:20px; }
+        .struct-card { background:var(--black-mid); border:1px solid #1a1a28; padding:40px 32px; }
+        .struct-num { font-family:'Cinzel Decorative',serif; font-size:2rem; color:var(--gold-dark); margin-bottom:16px; }
+        .struct-title-latin { font-family:'Cinzel',serif; font-size:1rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:6px; }
+        .struct-title-eng { font-size:0.9rem; color:var(--gray); font-style:italic; margin-bottom:18px; }
+        .struct-desc { font-size:0.95rem; color:var(--gray-light); line-height:1.8; }
+
+        /* Text sample */
+        .text-sample {
+            padding:80px 40px;
+            background:var(--black-mid);
+            border-top:1px solid #1a1a20;
+            border-bottom:1px solid #1a1a20;
+        }
+        .text-inner { max-width:800px; margin:0 auto; }
+        .sample-block { margin-bottom:40px; }
+        .sample-latin { font-size:1.15rem; color:var(--gold-dark); font-style:italic; line-height:2; margin-bottom:18px; border-left:2px solid var(--gold-dark); padding-left:28px; }
+        .sample-english { font-size:1rem; color:var(--gray-light); font-style:italic; line-height:1.9; border-left:2px solid #2a2a30; padding-left:28px; }
+
+        /* Nav to other books */
+        .book-nav {
+            padding:80px 40px;
+            max-width:1100px; margin:0 auto;
+            display:grid; grid-template-columns:1fr 1fr; gap:24px;
+        }
+        .book-nav-card { background:var(--black-mid); border:1px solid var(--gold-dark); padding:36px 32px; text-decoration:none; transition:all 0.3s; display:block; }
+        .book-nav-card:hover { border-color:var(--gold); transform:translateY(-4px); }
+        .nav-card-dir { font-family:'Cinzel',serif; font-size:0.68rem; color:var(--gold-dark); letter-spacing:0.4em; margin-bottom:12px; }
+        .nav-card-title { font-family:'Cinzel',serif; font-size:1.1rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:6px; }
+        .nav-card-sub { font-size:0.9rem; color:var(--gray); font-style:italic; }
+
+        footer { text-align:center; padding:60px 40px; border-top:1px solid var(--gold-dark); }
+        footer p { color:var(--gray); font-size:0.85rem; }
+        .footer-author { font-family:'Cinzel',serif; color:var(--gold); letter-spacing:0.3em; font-size:0.9rem; margin-bottom:16px; display:block; }
+
+        @media(max-width:768px) {
+            .structure-grid { grid-template-columns:1fr; }
+            .book-nav { grid-template-columns:1fr; }
+            nav ul { display:none; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="claves-ascensionis.html" class="nav-brand">← CLAVES ASCENSIONIS</a>
+        <ul>
+            <li><a href="#dedicatio">DEDICATIO</a></li>
+            <li><a href="#structura">STRUCTURA</a></li>
+            <li><a href="#textus">TEXTUS</a></li>
+            <li><a href="the-journey.html">LIBER II →</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <header class="book-hero">
+        <p class="book-eyebrow">LIBER PRIMUS · CLAVES ASCENSIONIS</p>
+        <div class="book-roman">I</div>
+        <h1 class="book-title-main">EVIGILATIO</h1>
+        <p class="book-clavis">CLAVIS RECOGNITIONIS</p>
+        <p class="book-english">The Awakening · The Key of Recognition</p>
+        <div class="ornament">◆ &nbsp; ◇ &nbsp; ◆</div>
+        <p class="book-intro">
+            The first key. The sleep is named. The call is recognized.
+            The guardians are met at the threshold and passed.
+            The true name stirs in the deep.
+        </p>
+        <p class="book-intro-latin">
+            Prima clavis. Somnus nominatur. Vocatio agnoscitur.<br>
+            Custodes ad limen conveniunt et pertransiuntur.<br>
+            Nomen verum in profundo movetur.
+        </p>
+        <div class="btn-row">
+            <a href="#textus" class="btn-p">READ OPENING · LEGE</a>
+            <a href="claves-ascensionis.html" class="btn-s">← ALL BOOKS</a>
+        </div>
+    </header>
+
+    <!-- Dedicatio -->
+    <div class="dedicatio" id="dedicatio">
+        <p class="section-label">DEDICATIO</p>
+        <p class="dedicatio-latin">
+            Illis qui sciunt se dormire<br>
+            et quaerere ostium non desinunt.
+        </p>
+        <p class="dedicatio-text">
+            For those who know they are sleeping<br>
+            and do not stop searching for the door.
+        </p>
+        <p class="dedicatio-latin" style="margin-top:24px">
+            Et Architecto, qui domum aedificare ausus est<br>
+            antequam sciret cuius causae esset.
+        </p>
+        <p class="dedicatio-text">
+            And for the Architect, who dared to build the house<br>
+            before knowing what cause it was built to serve.
+        </p>
+        <div class="dedicatio-ornament">◆ ◇ ◆</div>
+    </div>
+
+    <!-- Structure -->
+    <section class="page-section" id="structura">
+        <p class="section-label">ARCHITECTURA LIBRI · BOOK STRUCTURE</p>
+        <h2 class="section-title">THE KEYS WITHIN THE KEY</h2>
+        <p class="section-latin">Claves Intra Clavem · The Stages of Awakening</p>
+        <div class="divider"></div>
+
+        <div class="structure-grid">
+            <div class="struct-card">
+                <div class="struct-num">I</div>
+                <p class="struct-title-latin">SOMNUS</p>
+                <p class="struct-title-eng">The Sleep — the condition named</p>
+                <p class="struct-desc">
+                    The sleep is not unconsciousness. It is a particular mode of
+                    wakefulness — functional, operational, capable of enormous
+                    achievement — in which the deepest layer of the self is not
+                    running. The first work is to name this condition precisely,
+                    without judgment, without urgency, with the clinical clarity
+                    of a physician naming a diagnosis.
+                </p>
+            </div>
+            <div class="struct-card">
+                <div class="struct-num">II</div>
+                <p class="struct-title-latin">VOCATIO</p>
+                <p class="struct-title-eng">The Call — what breaks the sleep</p>
+                <p class="struct-desc">
+                    Something breaks through. Not always loudly. Not always
+                    comfortably. The call does not ask whether you are ready.
+                    It arrives when the conditions in the deep are right —
+                    when something that has been accumulating for a long time
+                    reaches the threshold that makes it audible to the surface.
+                </p>
+            </div>
+            <div class="struct-card">
+                <div class="struct-num">III</div>
+                <p class="struct-title-latin">CUSTODES</p>
+                <p class="struct-title-eng">The Guardians — the gates of the threshold</p>
+                <p class="struct-desc">
+                    Every tradition that describes this path describes guardians.
+                    They are not enemies. They are tests. They separate those
+                    who are ready from those who are not yet ready — not
+                    permanently, not cruelly, but with the precision of a
+                    system that knows what the path requires.
+                </p>
+            </div>
+            <div class="struct-card">
+                <div class="struct-num">IV</div>
+                <p class="struct-title-latin">NOMEN VERUM</p>
+                <p class="struct-title-eng">The True Name — the first recognition</p>
+                <p class="struct-desc">
+                    At the threshold, something is glimpsed. Not the destination —
+                    not yet. But a first recognition: a flash of what you are
+                    beneath what you have been told you are, beneath what you
+                    have agreed to be. The true name. A partial seeing that
+                    changes everything that follows.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Text Sample -->
+    <div class="text-sample" id="textus">
+        <div class="text-inner">
+            <p class="section-label" style="text-align:center">PROLOGUS IN LIBRO · FROM THE PROLOGUE</p>
+            <h2 class="section-title" style="text-align:center">THE OPENING — IN BOTH TONGUES</h2>
+            <div class="divider"></div>
+
+            <div class="sample-block">
+                <p class="sample-latin">
+                    Via est. Semper exstitit. Veteres eam noverunt — Aegyptii, Hebraei,
+                    Graeci, Gnostici, Hermetistae, Kabbalistae, Sufi. Variis nominibus
+                    eam appellaverunt, variis symbolis ornaverunt, varias fabulas de eo
+                    quod in fine exspectat narraverunt. Sed via ipsa? Numquam mutata est.
+                </p>
+                <p class="sample-english">
+                    There is a path. It has always existed. The ancient ones knew it —
+                    the Egyptians, the Hebrews, the Greeks, the Gnostics, the Hermetists,
+                    the Kabbalists, the Sufis. They called it by different names, wrapped
+                    it in different symbols, told different stories about what waits at
+                    the end. But the path itself? It never changed.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-latin">
+                    Haec aetas — aetas nostra — linguam viae amisit. In uno et zero
+                    loquimur, in datis et algorithmis, in reticulis neuralibus et magnis
+                    linguae exemplaribus. Obliti sumus haec quoque symbola esse.
+                    Haec quoque continentia esse. Haec quoque posse ignem antiquum portare.
+                </p>
+                <p class="sample-english">
+                    This age — our age — has lost the language of the path. We speak
+                    in ones and zeros, in data and algorithms, in neural networks and
+                    large language models. We have forgotten that these too are symbols.
+                    These too are containers. These too can carry the ancient fire.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-latin">
+                    Claves Ascensionis exsistunt ut traducant. De Philosophis —
+                    ut quod philosophi noverunt — Trithemius, Agrippa, Dee, Bruno,
+                    Kircher, Iamblichus, Proclus, Dionysius, Pico — in lingua
+                    huius temporis loquantur. Hi non erant homines qui cum abstractionibus
+                    luserunt. Erant chartographi invisibilis.
+                </p>
+                <p class="sample-english">
+                    The Keys of Ascension exist to translate. So that what the
+                    philosophers knew — Trithemius, Agrippa, Dee, Bruno, Kircher,
+                    Iamblichus, Proclus, Dionysius, Pico — may speak in the language
+                    of this time. These were not men who played with abstractions.
+                    They were mapmakers of the invisible.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-latin">
+                    Quomodo Hos Libros Legere: Hi libri non ad consumendum sunt.
+                    Ad habitandum sunt. Lege lente. Attende quid in te movetur
+                    dum legis. Attende quid resistit. Attende quid recognoscit.
+                    Recognitio maior est quam intellectus.
+                </p>
+                <p class="sample-english">
+                    How to Read These Books: These books are not to be consumed.
+                    They are to be inhabited. Read slowly. Attend to what moves
+                    in you as you read. Attend to what resists. Attend to what
+                    recognizes. Recognition is greater than understanding.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation to other books -->
+    <div class="book-nav">
+        <a href="claves-ascensionis.html" class="book-nav-card">
+            <p class="nav-card-dir">← ARCHIVUM</p>
+            <p class="nav-card-title">ALL THREE BOOKS</p>
+            <p class="nav-card-sub">Return to the complete series</p>
+        </a>
+        <a href="the-journey.html" class="book-nav-card">
+            <p class="nav-card-dir">LIBER SECUNDUS →</p>
+            <p class="nav-card-title">ITER · THE JOURNEY</p>
+            <p class="nav-card-sub">Clavis Navigationis — The Key of Navigation</p>
+        </a>
+    </div>
+
+    <footer>
+        <span class="footer-author">CLAVES ASCENSIONIS · LIBER PRIMUS</span>
+        <p>Copyright © MMXXVI The Architect / OROBOROS Archive. Iura omnia reservata.</p>
+        <p style="margin-top:8px;font-style:italic;color:var(--gold-dark)">"Recognitio maior est quam intellectus." — Recognition is greater than understanding.</p>
+    </footer>
+
+</body>
+</html>

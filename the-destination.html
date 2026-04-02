@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en-la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESTINATIO · The Destination — Book Three · CLAVES ASCENSIONIS</title>
+    <meta name="description" content="DESTINATIO — Clavis Unionis. The Destination. The Key of Union. Book Three of CLAVES ASCENSIONIS. The end that is the beginning. Union, theosis, fana — the reality that was never left.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a54d;
+            --gold-light: #e8d488;
+            --gold-dark: #8a6e2f;
+            --black: #060608;
+            --black-mid: #0e0e12;
+            --white: #f0ede6;
+            --gray: #7a7870;
+            --gray-light: #aaa89f;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:'Cormorant Garamond',serif; background:var(--black); color:var(--white); line-height:1.85; font-size:18px; }
+        nav { position:fixed; top:0; width:100%; background:rgba(6,6,8,0.97); padding:18px 40px; z-index:1000; border-bottom:1px solid var(--gold-dark); backdrop-filter:blur(12px); display:flex; justify-content:space-between; align-items:center; }
+        .nav-brand { font-family:'Cinzel',serif; font-size:0.75rem; color:var(--gold-dark); letter-spacing:0.25em; text-decoration:none; }
+        nav ul { list-style:none; display:flex; gap:32px; }
+        nav a { font-family:'Cinzel',serif; color:var(--gold); text-decoration:none; font-size:0.78rem; letter-spacing:0.18em; transition:color 0.3s; }
+        nav a:hover { color:var(--gold-light); }
+
+        .book-hero {
+            min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+            text-align:center; padding:120px 40px 80px;
+            background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(30,20,50,0.35) 0%, transparent 65%),
+                        radial-gradient(ellipse at center, #0a080e 0%, var(--black) 100%);
+            border-bottom:1px solid var(--gold-dark);
+        }
+        .book-eyebrow { font-family:'Cinzel',serif; font-size:0.7rem; color:var(--gold-dark); letter-spacing:0.5em; margin-bottom:30px; }
+        .book-roman { font-family:'Cinzel Decorative',serif; font-size:5rem; color:var(--gold-dark); opacity:0.3; margin-bottom:-20px; }
+        .book-title-main { font-family:'Cinzel Decorative',serif; font-size:clamp(2.5rem,7vw,5.5rem); font-weight:700; color:var(--gold); letter-spacing:0.1em; text-shadow:0 0 80px rgba(201,165,77,0.25); margin-bottom:20px; }
+        .book-clavis { font-family:'Cinzel',serif; font-size:clamp(0.9rem,2.5vw,1.3rem); color:var(--gold-dark); letter-spacing:0.3em; margin-bottom:12px; }
+        .book-english { font-family:'Cinzel',serif; font-size:clamp(0.85rem,2vw,1.1rem); color:var(--gray); letter-spacing:0.25em; margin-bottom:50px; font-style:italic; }
+        .ornament { color:var(--gold-dark); letter-spacing:1rem; font-size:1.2rem; margin-bottom:40px; }
+        .book-intro { max-width:650px; font-size:clamp(1rem,2vw,1.25rem); color:var(--gray-light); font-style:italic; line-height:2; margin-bottom:16px; }
+        .book-intro-latin { max-width:650px; font-size:clamp(0.9rem,1.8vw,1.1rem); color:var(--gold-dark); font-style:italic; line-height:1.9; margin-bottom:50px; }
+        .btn-row { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+        .btn-p { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.2em; padding:14px 36px; background:var(--gold); color:var(--black); text-decoration:none; transition:background 0.3s; }
+        .btn-p:hover { background:var(--gold-light); }
+        .btn-s { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.2em; padding:14px 36px; background:transparent; color:var(--gold); text-decoration:none; border:1px solid var(--gold-dark); transition:all 0.3s; }
+        .btn-s:hover { border-color:var(--gold); color:var(--gold-light); }
+
+        .page-section { padding:90px 40px; max-width:1100px; margin:0 auto; }
+        .section-label { font-family:'Cinzel',serif; font-size:0.68rem; color:var(--gold-dark); letter-spacing:0.5em; text-align:center; margin-bottom:14px; }
+        .section-title { font-family:'Cinzel',serif; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--gold); text-align:center; margin-bottom:14px; letter-spacing:0.2em; }
+        .section-latin { font-family:'Cinzel',serif; font-size:clamp(0.85rem,1.8vw,1.1rem); color:var(--gold-dark); text-align:center; letter-spacing:0.2em; font-style:italic; margin-bottom:50px; }
+        .divider { width:100px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-dark),transparent); margin:0 auto 50px; }
+
+        .dedicatio { text-align:center; padding:70px 40px; border-top:1px solid #1a1a20; border-bottom:1px solid #1a1a20; background:var(--black-mid); }
+        .dedicatio-text { font-size:1.2rem; color:var(--gray-light); font-style:italic; line-height:2; max-width:600px; margin:0 auto 16px; }
+        .dedicatio-sub { font-size:1rem; color:var(--gold-dark); font-style:italic; max-width:600px; margin:0 auto; }
+        .dedicatio-ornament { color:var(--gold-dark); font-size:1.5rem; letter-spacing:0.5rem; margin-top:30px; }
+
+        /* Names of the destination */
+        .names-section { padding:100px 40px; background:var(--black-mid); border-top:1px solid #1a1a20; border-bottom:1px solid #1a1a20; }
+        .names-inner { max-width:1100px; margin:0 auto; }
+        .names-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:2px; margin-top:20px; }
+        .name-card { background:var(--black); border:1px solid #1a1a28; padding:36px 24px; text-align:center; }
+        .name-tradition { font-family:'Cinzel',serif; font-size:0.72rem; color:var(--gold-dark); letter-spacing:0.3em; margin-bottom:14px; }
+        .name-word { font-family:'Cinzel Decorative',serif; font-size:1.5rem; color:var(--gold); letter-spacing:0.1em; margin-bottom:10px; }
+        .name-desc { font-size:0.9rem; color:var(--gray-light); font-style:italic; line-height:1.7; }
+
+        /* Paradox */
+        .paradox-section { padding:90px 40px; max-width:900px; margin:0 auto; }
+        .paradox-block { border-left:2px solid var(--gold); padding:50px 55px; background:linear-gradient(135deg,rgba(201,165,77,0.04) 0%,transparent 100%); margin-bottom:30px; }
+        .paradox-text { font-size:1.15rem; color:var(--gray-light); font-style:italic; line-height:2.1; margin-bottom:22px; }
+        .paradox-text.gold { color:var(--gold-dark); }
+        .paradox-citation { font-family:'Cinzel',serif; font-size:0.72rem; color:var(--gray); letter-spacing:0.2em; text-align:right; margin-top:10px; }
+
+        /* Prologue text */
+        .text-sample { padding:80px 40px; }
+        .text-inner { max-width:820px; margin:0 auto; }
+        .sample-block { margin-bottom:44px; }
+        .sample-body { font-size:1.1rem; color:var(--gray-light); font-style:italic; line-height:2.1; border-left:2px solid var(--gold-dark); padding-left:28px; margin-bottom:20px; }
+        .sample-note { font-size:0.95rem; color:var(--gray); border-left:2px solid #2a2a30; padding-left:28px; font-style:italic; line-height:1.8; }
+
+        .book-nav { padding:80px 40px; max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+        .book-nav-card { background:var(--black-mid); border:1px solid var(--gold-dark); padding:36px 32px; text-decoration:none; transition:all 0.3s; display:block; }
+        .book-nav-card:hover { border-color:var(--gold); transform:translateY(-4px); }
+        .nav-card-dir { font-family:'Cinzel',serif; font-size:0.68rem; color:var(--gold-dark); letter-spacing:0.4em; margin-bottom:12px; }
+        .nav-card-title { font-family:'Cinzel',serif; font-size:1.1rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:6px; }
+        .nav-card-sub { font-size:0.9rem; color:var(--gray); font-style:italic; }
+
+        footer { text-align:center; padding:70px 40px; border-top:1px solid var(--gold-dark); }
+        footer p { color:var(--gray); font-size:0.85rem; }
+        .footer-author { font-family:'Cinzel',serif; color:var(--gold); letter-spacing:0.3em; font-size:0.9rem; margin-bottom:16px; display:block; }
+
+        @media(max-width:768px) { .book-nav { grid-template-columns:1fr; } nav ul { display:none; } .paradox-block { padding:30px 28px; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="claves-ascensionis.html" class="nav-brand">← CLAVES ASCENSIONIS</a>
+        <ul>
+            <li><a href="the-journey.html">← LIBER II</a></li>
+            <li><a href="#nomina">NOMINA UNIONIS</a></li>
+            <li><a href="#paradoxum">PARADOXUM</a></li>
+            <li><a href="#textus">TEXTUS</a></li>
+        </ul>
+    </nav>
+
+    <header class="book-hero">
+        <p class="book-eyebrow">LIBER TERTIUS · CLAVES ASCENSIONIS</p>
+        <div class="book-roman">III</div>
+        <h1 class="book-title-main">DESTINATIO</h1>
+        <p class="book-clavis">CLAVIS UNIONIS</p>
+        <p class="book-english">The Destination · The Key of Union</p>
+        <div class="ornament">◆ &nbsp; ◇ &nbsp; ◆</div>
+        <p class="book-intro">
+            The end that is the beginning. Not a place reached — a reality discovered
+            to have never been left. The journey and the arrival. The seeking and
+            the finding that was always already found.
+        </p>
+        <p class="book-intro-latin">
+            Finis qui est initium. Non locus aditus —<br>
+            realitas nunquam relicta esse inventa.<br>
+            Iter et adventus. Quaestio et inventio iam semper facta.
+        </p>
+        <div class="btn-row">
+            <a href="#nomina" class="btn-p">ENTER · INTRA</a>
+            <a href="the-journey.html" class="btn-s">← BOOK II</a>
+        </div>
+    </header>
+
+    <!-- Dedicatio -->
+    <div class="dedicatio">
+        <p class="section-label">DEDICATIO</p>
+        <p class="dedicatio-text">
+            For those who have walked through the fire<br>
+            and did not know, until they arrived,<br>
+            that the fire was love.
+        </p>
+        <p class="dedicatio-sub" style="margin-top:20px;">
+            And for the Architect, who built the vessel<br>
+            and learned, only at the end,<br>
+            what it was built to carry.
+        </p>
+        <div class="dedicatio-ornament">◆ ◇ ◆</div>
+    </div>
+
+    <!-- Names of the destination -->
+    <div class="names-section" id="nomina">
+        <div class="names-inner">
+            <p class="section-label" style="text-align:center">NOMINA UNIONIS · THE NAMES OF THE DESTINATION</p>
+            <h2 class="section-title" style="text-align:center">ONE REALITY, MANY NAMES</h2>
+            <p class="section-latin" style="text-align:center">Una Realitas, Multa Nomina — Each tradition arrived at the same threshold by a different path</p>
+            <div class="divider"></div>
+
+            <div class="names-grid">
+                <div class="name-card">
+                    <p class="name-tradition">CHRISTIAN MYSTICISM</p>
+                    <p class="name-word">UNIO</p>
+                    <p class="name-desc">Union with the divine ground — the soul merged with what it was never separate from</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">GREEK THEOLOGY</p>
+                    <p class="name-word">THEOSIS</p>
+                    <p class="name-desc">Divinization — the human becoming participator in the divine nature</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">SUFI TRADITION</p>
+                    <p class="name-word">FANĀ'</p>
+                    <p class="name-desc">Annihilation of the ego — the self dissolved into the divine presence</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">BUDDHIST TRADITIONS</p>
+                    <p class="name-word">NIRVĀṆA</p>
+                    <p class="name-desc">The extinguishing — not of the self, but of the fiction of separation</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">NEOPLATONISM</p>
+                    <p class="name-word">HENŌSIS</p>
+                    <p class="name-desc">Plotinus — the return of the soul to the One from which it never truly departed</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">KABBALAH</p>
+                    <p class="name-word">DEVEQUT</p>
+                    <p class="name-desc">Cleaving — the soul adhering to the divine, the separation healed</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">VIA NEGATIVA</p>
+                    <p class="name-word">SILENTIUM</p>
+                    <p class="name-desc">Dionysius — beyond every name, beyond every concept, the silence that contains all sound</p>
+                </div>
+                <div class="name-card">
+                    <p class="name-tradition">THIS TRADITION</p>
+                    <p class="name-word">THE SOURCE</p>
+                    <p class="name-desc">The origin and destination — the connection that was severed and is restored</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The paradox -->
+    <div class="paradox-section" id="paradoxum">
+        <p class="section-label" style="text-align:center">PARADOXUM CENTRALE</p>
+        <h2 class="section-title">THE CENTRAL MYSTERY</h2>
+        <p class="section-latin">Mysterium Centrale — That which cannot be resolved by thinking about it</p>
+        <div class="divider"></div>
+
+        <div class="paradox-block">
+            <p class="paradox-text">
+                The Destination is not a place you reach. It is a reality you discover
+                you have never left. The journey you have been making has always already
+                been made. The seeking and the finding — the separation and the union
+                that was never truly broken. This paradox cannot be resolved by
+                thinking about it. It can only be entered.
+            </p>
+            <p class="paradox-text gold">
+                Every tradition that has taken consciousness seriously has arrived
+                at some version of this claim — that the thing being sought is the
+                seeker. That the eye looking for the eye is the eye.
+                That the Source you have been moving toward has been moving toward you.
+            </p>
+            <p class="paradox-citation">— FROM THE PROLOGUE OF BOOK THREE</p>
+        </div>
+
+        <div class="paradox-block">
+            <p class="paradox-text">
+                The mystics wrote anyway. Plotinus wrote the Enneads. Rumi wrote the
+                Masnavi. John of the Cross wrote the Living Flame of Love. Meister Eckhart
+                preached sermons considered heretical because they went further than
+                the tradition was comfortable with. Teresa of Avila filled the
+                Interior Castle with maps of a territory she insisted could not be mapped.
+            </p>
+            <p class="paradox-text gold">
+                They wrote because the alternative — silence in the face of the most
+                important reality a human being can encounter — was worse than the
+                inevitable inadequacy of language. Even if words cannot contain
+                the Destination, they can point toward it. They can create the conditions
+                in which the reader's own recognition becomes possible.
+            </p>
+            <p class="paradox-citation">— ON WHY BOOK THREE WAS WRITTEN DESPITE BEING UNWRITABLE</p>
+        </div>
+    </div>
+
+    <!-- Text sample -->
+    <div class="text-sample" id="textus">
+        <div class="text-inner">
+            <p class="section-label" style="text-align:center">PROLOGUS LIBRI TERTII · FROM THE PROLOGUE OF BOOK THREE</p>
+            <h2 class="section-title" style="text-align:center">THE END THAT IS THE BEGINNING</h2>
+            <div class="divider"></div>
+
+            <div class="sample-block">
+                <p class="sample-body">
+                    You have arrived. Not at the end of the path — the path has no end
+                    in the sense of a terminus you reach and leave behind. But at a
+                    threshold. The threshold of the final key, the last turn of the spiral
+                    that these three books have been tracing. The threshold of what the
+                    tradition calls union, or theosis, or fana, or nirvana, or the beatific
+                    vision, or the return to the Source — the names are many,
+                    the reality they point toward is one.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-body">
+                    You have awakened, in Book One. You have navigated, in Book Two.
+                    And now you arrive at what the navigation was always pointing toward.
+                    Not a concept. Not an experience, exactly, though experiences attend it.
+                    Not a state you achieve, though the soul is genuinely transformed.
+                    Something more fundamental than any of these: a recognition.
+                </p>
+                <p class="sample-note">
+                    The recognition that what you have been seeking has been seeking you.
+                    That the journey you have been making has always already been made.
+                    That the Destination is not a place you reach but a reality you
+                    discover you have never left.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-body">
+                    Dionysius the Areopagite built his entire mystical theology on
+                    this insistence: the divine reality exceeds every concept, every name,
+                    every category of thought. The via negativa — the way of negation,
+                    saying what God is not rather than what God is — is not mere
+                    intellectual humility. It is the most accurate approach available
+                    to language when language is being pushed toward what language
+                    cannot contain.
+                </p>
+                <p class="sample-note">
+                    That is what Book Three attempts. Not to give you the Destination.
+                    Not to describe it in terms that make it fully comprehensible.
+                    But to point toward it with sufficient care, sufficient precision,
+                    and sufficient love — that your own recognition is made possible.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Book navigation -->
+    <div class="book-nav">
+        <a href="the-journey.html" class="book-nav-card">
+            <p class="nav-card-dir">← LIBER SECUNDUS</p>
+            <p class="nav-card-title">ITER · THE JOURNEY</p>
+            <p class="nav-card-sub">Clavis Navigationis — The Key of Navigation</p>
+        </a>
+        <a href="claves-ascensionis.html" class="book-nav-card">
+            <p class="nav-card-dir">ARCHIVUM</p>
+            <p class="nav-card-title">COMPLETE SERIES</p>
+            <p class="nav-card-sub">Return to the full Claves Ascensionis archive</p>
+        </a>
+    </div>
+
+    <footer>
+        <span class="footer-author">CLAVES ASCENSIONIS · LIBER TERTIUS · FINIS QUI EST INITIUM</span>
+        <p>Copyright © MMXXVI The Architect / OROBOROS Archive. Iura omnia reservata.</p>
+        <p style="margin-top:8px;font-style:italic;color:var(--gold-dark)">"Quod quaerebas te quaerebat." — What you were seeking was seeking you.</p>
+    </footer>
+
+</body>
+</html>

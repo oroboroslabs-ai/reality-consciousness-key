@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-la">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITER · The Journey — Book Two · CLAVES ASCENSIONIS</title>
+    <meta name="description" content="ITER — Clavis Navigationis. The Journey. The Key of Navigation. Book Two of CLAVES ASCENSIONIS. The map of the path between awakening and union.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;900&family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c9a54d;
+            --gold-light: #e8d488;
+            --gold-dark: #8a6e2f;
+            --black: #060608;
+            --black-mid: #0e0e12;
+            --white: #f0ede6;
+            --gray: #7a7870;
+            --gray-light: #aaa89f;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body { font-family:'Cormorant Garamond',serif; background:var(--black); color:var(--white); line-height:1.85; font-size:18px; }
+        nav { position:fixed; top:0; width:100%; background:rgba(6,6,8,0.97); padding:18px 40px; z-index:1000; border-bottom:1px solid var(--gold-dark); backdrop-filter:blur(12px); display:flex; justify-content:space-between; align-items:center; }
+        .nav-brand { font-family:'Cinzel',serif; font-size:0.75rem; color:var(--gold-dark); letter-spacing:0.25em; text-decoration:none; }
+        nav ul { list-style:none; display:flex; gap:32px; }
+        nav a { font-family:'Cinzel',serif; color:var(--gold); text-decoration:none; font-size:0.78rem; letter-spacing:0.18em; transition:color 0.3s; }
+        nav a:hover { color:var(--gold-light); }
+
+        .book-hero {
+            min-height:100vh; display:flex; flex-direction:column; justify-content:center; align-items:center;
+            text-align:center; padding:120px 40px 80px;
+            background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(10,30,50,0.3) 0%, transparent 65%),
+                        radial-gradient(ellipse at center, #080c0e 0%, var(--black) 100%);
+            border-bottom:1px solid var(--gold-dark);
+        }
+        .book-eyebrow { font-family:'Cinzel',serif; font-size:0.7rem; color:var(--gold-dark); letter-spacing:0.5em; margin-bottom:30px; }
+        .book-roman { font-family:'Cinzel Decorative',serif; font-size:5rem; color:var(--gold-dark); opacity:0.35; margin-bottom:-20px; }
+        .book-title-main { font-family:'Cinzel Decorative',serif; font-size:clamp(3rem,8vw,6rem); font-weight:700; color:var(--gold); letter-spacing:0.1em; text-shadow:0 0 80px rgba(201,165,77,0.2); margin-bottom:20px; }
+        .book-clavis { font-family:'Cinzel',serif; font-size:clamp(0.9rem,2.5vw,1.3rem); color:var(--gold-dark); letter-spacing:0.3em; margin-bottom:12px; }
+        .book-english { font-family:'Cinzel',serif; font-size:clamp(0.85rem,2vw,1.1rem); color:var(--gray); letter-spacing:0.25em; margin-bottom:50px; font-style:italic; }
+        .ornament { color:var(--gold-dark); letter-spacing:1rem; font-size:1.2rem; margin-bottom:40px; }
+        .book-intro { max-width:650px; font-size:clamp(1rem,2vw,1.25rem); color:var(--gray-light); font-style:italic; line-height:2; margin-bottom:16px; }
+        .book-intro-latin { max-width:650px; font-size:clamp(0.9rem,1.8vw,1.1rem); color:var(--gold-dark); font-style:italic; line-height:1.9; margin-bottom:50px; }
+        .btn-row { display:flex; gap:20px; flex-wrap:wrap; justify-content:center; }
+        .btn-p { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.2em; padding:14px 36px; background:var(--gold); color:var(--black); text-decoration:none; transition:background 0.3s; }
+        .btn-p:hover { background:var(--gold-light); }
+        .btn-s { font-family:'Cinzel',serif; font-size:0.8rem; letter-spacing:0.2em; padding:14px 36px; background:transparent; color:var(--gold); text-decoration:none; border:1px solid var(--gold-dark); transition:all 0.3s; }
+        .btn-s:hover { border-color:var(--gold); color:var(--gold-light); }
+
+        .page-section { padding:90px 40px; max-width:1100px; margin:0 auto; }
+        .section-label { font-family:'Cinzel',serif; font-size:0.68rem; color:var(--gold-dark); letter-spacing:0.5em; text-align:center; margin-bottom:14px; }
+        .section-title { font-family:'Cinzel',serif; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--gold); text-align:center; margin-bottom:14px; letter-spacing:0.2em; }
+        .section-latin { font-family:'Cinzel',serif; font-size:clamp(0.85rem,1.8vw,1.1rem); color:var(--gold-dark); text-align:center; letter-spacing:0.2em; font-style:italic; margin-bottom:50px; }
+        .divider { width:100px; height:1px; background:linear-gradient(90deg,transparent,var(--gold-dark),transparent); margin:0 auto 50px; }
+
+        .dedicatio { text-align:center; padding:60px 40px; border-top:1px solid #1a1a20; border-bottom:1px solid #1a1a20; background:var(--black-mid); }
+        .dedicatio-text { font-size:1.2rem; color:var(--gray-light); font-style:italic; line-height:2; max-width:600px; margin:0 auto 16px; }
+        .dedicatio-sub { font-size:1rem; color:var(--gold-dark); font-style:italic; line-height:1.9; max-width:600px; margin:0 auto; }
+        .dedicatio-ornament { color:var(--gold-dark); font-size:1.5rem; letter-spacing:0.5rem; margin-top:30px; }
+
+        /* Spiral stages */
+        .spiral-section { padding:100px 40px; background:var(--black-mid); border-top:1px solid #1a1a20; border-bottom:1px solid #1a1a20; }
+        .spiral-inner { max-width:1100px; margin:0 auto; }
+        .spiral-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:2px; margin-top:20px; }
+        .spiral-card { background:var(--black); border:1px solid #1a1a28; padding:36px 28px; }
+        .spiral-num { font-family:'Cinzel Decorative',serif; font-size:2rem; color:var(--gold-dark); margin-bottom:14px; }
+        .spiral-title-latin { font-family:'Cinzel',serif; font-size:0.95rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:6px; }
+        .spiral-title-eng { font-size:0.88rem; color:var(--gray); font-style:italic; margin-bottom:16px; }
+        .spiral-desc { font-size:0.95rem; color:var(--gray-light); line-height:1.8; }
+
+        /* Prologue text */
+        .text-sample { padding:80px 40px; }
+        .text-inner { max-width:820px; margin:0 auto; }
+        .sample-block { margin-bottom:44px; }
+        .sample-body { font-size:1.1rem; color:var(--gray-light); font-style:italic; line-height:2; border-left:2px solid var(--gold-dark); padding-left:28px; margin-bottom:20px; }
+        .sample-note { font-size:0.92rem; color:var(--gray); border-left:2px solid #2a2a30; padding-left:28px; font-style:italic; line-height:1.8; }
+
+        /* Warning: the path is hard */
+        .warning-section { padding:80px 40px; background:var(--black-mid); border-top:1px solid #1a1a20; border-bottom:1px solid #1a1a20; }
+        .warning-inner { max-width:800px; margin:0 auto; text-align:center; }
+        .warning-text { font-size:1.15rem; color:var(--gray-light); font-style:italic; line-height:2; margin-bottom:20px; }
+        .warning-text.bold { font-weight:600; color:var(--white); font-style:normal; }
+
+        .book-nav { padding:80px 40px; max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:24px; }
+        .book-nav-card { background:var(--black-mid); border:1px solid var(--gold-dark); padding:36px 32px; text-decoration:none; transition:all 0.3s; display:block; }
+        .book-nav-card:hover { border-color:var(--gold); transform:translateY(-4px); }
+        .nav-card-dir { font-family:'Cinzel',serif; font-size:0.68rem; color:var(--gold-dark); letter-spacing:0.4em; margin-bottom:12px; }
+        .nav-card-title { font-family:'Cinzel',serif; font-size:1.1rem; color:var(--gold); letter-spacing:0.15em; margin-bottom:6px; }
+        .nav-card-sub { font-size:0.9rem; color:var(--gray); font-style:italic; }
+
+        footer { text-align:center; padding:60px 40px; border-top:1px solid var(--gold-dark); }
+        footer p { color:var(--gray); font-size:0.85rem; }
+        .footer-author { font-family:'Cinzel',serif; color:var(--gold); letter-spacing:0.3em; font-size:0.9rem; margin-bottom:16px; display:block; }
+
+        @media(max-width:900px) { .spiral-grid { grid-template-columns:1fr; } .book-nav { grid-template-columns:1fr; } nav ul { display:none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="claves-ascensionis.html" class="nav-brand">← CLAVES ASCENSIONIS</a>
+        <ul>
+            <li><a href="liber-primus.html">← LIBER I</a></li>
+            <li><a href="#strata">STRATA ITINERIS</a></li>
+            <li><a href="#textus">TEXTUS</a></li>
+            <li><a href="the-destination.html">LIBER III →</a></li>
+        </ul>
+    </nav>
+
+    <header class="book-hero">
+        <p class="book-eyebrow">LIBER SECUNDUS · CLAVES ASCENSIONIS</p>
+        <div class="book-roman">II</div>
+        <h1 class="book-title-main">ITER</h1>
+        <p class="book-clavis">CLAVIS NAVIGATIONIS</p>
+        <p class="book-english">The Journey · The Key of Navigation</p>
+        <div class="ornament">◆ &nbsp; ◇ &nbsp; ◆</div>
+        <p class="book-intro">
+            You have awakened. The threshold is crossed. Now the path reveals itself
+            to be something other than you expected — not a road, but a spiral.
+            A movement that descends before it ascends, empties before it fills.
+        </p>
+        <p class="book-intro-latin">
+            Evigilasti. Limen transivisti. Nunc via se revelat:<br>
+            non iter rectum sed spirale.<br>
+            Descenditur prius quam ascenditur. Evacuatur prius quam impletur.
+        </p>
+        <div class="btn-row">
+            <a href="#textus" class="btn-p">READ OPENING · LEGE</a>
+            <a href="liber-primus.html" class="btn-s">← BOOK I</a>
+        </div>
+    </header>
+
+    <!-- Dedicatio -->
+    <div class="dedicatio">
+        <p class="section-label">DEDICATIO</p>
+        <p class="dedicatio-text">
+            For those who have crossed the threshold<br>
+            and are walking, even now, through the dark.
+        </p>
+        <p class="dedicatio-sub" style="margin-top:16px;">
+            You are further along than you think.<br>
+            The center is closer than it appears.<br>
+            Keep walking.
+        </p>
+        <div class="dedicatio-ornament">◆ ◇ ◆</div>
+    </div>
+
+    <!-- Spiral stages -->
+    <div class="spiral-section" id="strata">
+        <div class="spiral-inner">
+            <p class="section-label" style="text-align:center">STRATA ITINERIS · STAGES OF THE JOURNEY</p>
+            <h2 class="section-title" style="text-align:center">THE MAP OF THE DESCENT AND ASCENT</h2>
+            <p class="section-latin" style="text-align:center">The path is a spiral, not a line. Every turn returns to the same territory at a deeper level.</p>
+            <div class="divider"></div>
+
+            <div class="spiral-grid">
+                <div class="spiral-card">
+                    <div class="spiral-num">I</div>
+                    <p class="spiral-title-latin">DESCENSUS</p>
+                    <p class="spiral-title-eng">The Descent — going deeper before going higher</p>
+                    <p class="spiral-desc">
+                        Genuine transformation does not begin by rising. It begins by
+                        going down — into the places that have not been looked at,
+                        the fears that have been carried without being named, the
+                        wounds that have been managing the self from the shadow.
+                        The descent is not failure. It is the path.
+                    </p>
+                </div>
+                <div class="spiral-card">
+                    <div class="spiral-num">II</div>
+                    <p class="spiral-title-latin">PROBATIO</p>
+                    <p class="spiral-title-eng">The Tests — what each stage demands</p>
+                    <p class="spiral-desc">
+                        Each stratum of the journey carries its own test. Not
+                        arbitrary obstacles — specific challenges that match
+                        what must be transformed at that level. The test of
+                        the first stratum is not the test of the seventh.
+                        Each requires what the previous ones have built.
+                    </p>
+                </div>
+                <div class="spiral-card">
+                    <div class="spiral-num">III</div>
+                    <p class="spiral-title-latin">NOX OBSCURA</p>
+                    <p class="spiral-title-eng">The Dark Night — the necessary emptying</p>
+                    <p class="spiral-desc">
+                        Every tradition that describes this path describes the
+                        dark night. John of the Cross named it. The Sufis
+                        mapped it. The Kabbalists encoded it. It visits every
+                        serious seeker — not as punishment, not as failure,
+                        but as the final clearing before the threshold of union.
+                    </p>
+                </div>
+                <div class="spiral-card">
+                    <div class="spiral-num">IV</div>
+                    <p class="spiral-title-latin">DONA ITINERIS</p>
+                    <p class="spiral-title-eng">The Gifts — what each stage confers</p>
+                    <p class="spiral-desc">
+                        The path does not only take. Each stage, having been
+                        passed, confers what only that stage can give — a
+                        particular quality of awareness, a particular freedom,
+                        a particular capacity for the work that follows.
+                        The gifts accumulate. They do not disappear.
+                    </p>
+                </div>
+                <div class="spiral-card">
+                    <div class="spiral-num">V</div>
+                    <p class="spiral-title-latin">CASUS ET SURRECTIO</p>
+                    <p class="spiral-title-eng">Falls and Rising — the inevitable rhythm</p>
+                    <p class="spiral-desc">
+                        The journey does not proceed in a straight ascending line.
+                        Falls are built into the path. Not as exceptions — as
+                        part of the mechanism. What the falls teach cannot be
+                        learned otherwise. The rising after a fall carries
+                        something the initial rising could not.
+                    </p>
+                </div>
+                <div class="spiral-card">
+                    <div class="spiral-num">VI</div>
+                    <p class="spiral-title-latin">PRAEPARATIO</p>
+                    <p class="spiral-title-eng">Preparation — the approach to Book Three</p>
+                    <p class="spiral-desc">
+                        The final stage of Book Two is not the destination.
+                        It is the preparation for it — the clarification, the
+                        stripping away of what is not essential, the arrival
+                        at the simplicity that makes what Book Three describes
+                        possible. The last work before the threshold of union.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Text sample -->
+    <div class="text-sample" id="textus">
+        <div class="text-inner">
+            <p class="section-label" style="text-align:center">PROLOGUS LIBRI SECUNDI · FROM THE PROLOGUE OF BOOK TWO</p>
+            <h2 class="section-title" style="text-align:center">THE PATH BEFORE YOU</h2>
+            <div class="divider"></div>
+
+            <div class="sample-block">
+                <p class="sample-body">
+                    You have awakened. Not fully. Not finally. Not in the sense that
+                    the journey is complete or the destination reached. But in the sense
+                    that matters most at this moment: you have crossed the threshold
+                    that most people never cross. You have heard the call and answered it.
+                    You have passed, at least in part, through the guardians that turn
+                    back the unprepared. You have caught a glimpse — however partial,
+                    however fleeting — of your true name. You are on the path.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-body">
+                    And now the path reveals itself to be something other than you expected.
+                    You expected, perhaps, a road — a clear direction, forward progress,
+                    visible milestones. The contemplative traditions encourage this
+                    expectation, because without some anticipation of a way through,
+                    most people would not begin. But what the path actually is, once
+                    you are on it, is something different. It is a spiral.
+                </p>
+                <p class="sample-note">
+                    A movement that returns to the same territory again and again at
+                    deepening levels. A journey that requires you to descend before
+                    you can ascend, to lose before you can find, to empty before
+                    you can be filled. This is not a disappointment. It is the
+                    nature of genuine transformation.
+                </p>
+            </div>
+
+            <div class="sample-block">
+                <p class="sample-body">
+                    A map is not the territory. You will discover, as every seeker
+                    before you has discovered, that the actual experience of the
+                    journey contains things the map cannot show. Aspects of your
+                    own psychology that no general description can anticipate.
+                    Specific forms that the tests take in the context of your
+                    specific life. Particular gifts and particular difficulties
+                    that belong to you alone.
+                </p>
+                <p class="sample-note">
+                    The map shows the general shape. The walking shows you the
+                    specific texture. Use the map. But do not mistake it for the journey.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The dark night note -->
+    <div class="warning-section">
+        <div class="warning-inner">
+            <p class="section-label">NOX OBSCURA ANIMAE</p>
+            <h2 class="section-title">A NOTE ON THE DARK NIGHT</h2>
+            <div class="divider"></div>
+            <p class="warning-text bold">
+                If you are in the dark night, this is for you.
+            </p>
+            <p class="warning-text">
+                The dark night is not depression, though it can look like it from outside.
+                It is not breakdown, though it can feel like it from inside.
+                It is the specific experience of the soul's deepest certainties
+                being removed — not destroyed, but dissolved, so that what
+                they were protecting against can finally be faced.
+            </p>
+            <p class="warning-text">
+                Every mystical tradition describes this stage. John of the Cross wrote
+                its most precise map. The Sufis called it fana — annihilation.
+                The Kabbalists encoded it in the sephirah of Binah.
+                What the traditions agree on: it is not the end. It is the penultimate
+                stage before the threshold that Book Three describes.
+            </p>
+            <p class="warning-text">
+                If you are in it: you are not lost. You are found.
+                The darkness is evidence that the light is working.
+            </p>
+        </div>
+    </div>
+
+    <!-- Book navigation -->
+    <div class="book-nav">
+        <a href="liber-primus.html" class="book-nav-card">
+            <p class="nav-card-dir">← LIBER PRIMUS</p>
+            <p class="nav-card-title">EVIGILATIO · THE AWAKENING</p>
+            <p class="nav-card-sub">Clavis Recognitionis — The Key of Recognition</p>
+        </a>
+        <a href="the-destination.html" class="book-nav-card">
+            <p class="nav-card-dir">LIBER TERTIUS →</p>
+            <p class="nav-card-title">DESTINATIO · THE DESTINATION</p>
+            <p class="nav-card-sub">Clavis Unionis — The Key of Union</p>
+        </a>
+    </div>
+
+    <footer>
+        <span class="footer-author">CLAVES ASCENSIONIS · LIBER SECUNDUS</span>
+        <p>Copyright © MMXXVI The Architect / OROBOROS Archive. Iura omnia reservata.</p>
+        <p style="margin-top:8px;font-style:italic;color:var(--gold-dark)">"Via est spiralis, non linea." — The path is a spiral, not a line.</p>
+    </footer>
+
+</body>
+</html>
